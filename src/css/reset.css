@@ -1,4 +1,8 @@
 /* Reset styles */
+* {
+  box-sizing: border-box;
+}
+
 h1,
 h2,
 h3,
@@ -31,5 +35,12 @@ button {
 img {
   display: block;
   max-width: 100%;
-  height: auto;
+  object-fit: cover;
+}
+
+input,
+textarea,
+fieldset {
+  padding: 0;
+  resize: none;
 }
