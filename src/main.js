@@ -36,7 +36,6 @@ function toRenderImages(event) {
       if (!response.ok) {
         throw new Error('Your request is not ok!');
       }
-      loader.classList.add('hide');
       return response.json();
     })
     .then(images => {
@@ -85,5 +84,8 @@ function toRenderImages(event) {
       modal.refresh();
     })
     .catch(error => console.log(error))
-    .finally(() => form.reset());
+    .finally(() => {
+      loader.classList.add('hide');
+      form.reset();
+    });
 }
